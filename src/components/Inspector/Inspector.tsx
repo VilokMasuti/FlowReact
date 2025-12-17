@@ -243,7 +243,7 @@ function SyncedSliderInput({
           onBlur={() => setDraft(String(value))}
           min={0}
           max={100}
-          className="w-16 bg-zinc-800/50 border-zinc-700 text-center"
+          className="w-16  text-center text-white text-2xl bg-amber-500"
         />
       </div>
 

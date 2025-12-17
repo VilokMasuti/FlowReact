@@ -21,6 +21,8 @@ import { useIsMobile } from '../../hooks/use-mobile';
 
 import { useAppStore } from '../../store/store';
 import { useApps } from '../../hooks/use-apps';
+import { Avatar, AvatarImage } from '../ui/avatar';
+import { AvatarFallback } from '@radix-ui/react-avatar';
 
 export function TopBar() {
   const {
@@ -158,11 +160,11 @@ export function TopBar() {
           </>
         )}
 
-        {/* User avatar */}
-        <div className="ml-1 sm:ml-2 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-pink-500 shrink-0">
-          <span className="text-[10px] sm:text-xs font-medium text-white">
-            U
-          </span>
+        <div className="ml-1 sm:ml-2 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center ">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>V</AvatarFallback>
+          </Avatar>
         </div>
       </div>
     </header>
